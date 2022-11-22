@@ -8,4 +8,12 @@ bandit3: The trick was to change into the directory then the flag is in a hidden
 
 bandit4: The flag was in one of the files (-file07) in the "inhere" directory. It was the only one with ASCII text, so this command can be run "file ./\* | grep ASCII" to find the ASCII file
 
-bandit5:  
+bandit5: use command "find . -size 1033c" to find a file of size 1033
+
+bandit6: use command "find / -user bandit7 -group bandit6 -size 33c"
+
+bandit7: use command "cat data.txt | grep millionth"
+
+bandit8: use command "cat data.txt | sort | uniq -cu" to sort the results, count the number of occurrences, and get the unique result
+
+bandit9: 
