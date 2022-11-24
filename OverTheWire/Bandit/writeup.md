@@ -16,4 +16,10 @@ bandit7: use command "cat data.txt | grep millionth"
 
 bandit8: use command "cat data.txt | sort | uniq -cu" to sort the results, count the number of occurrences, and get the unique result
 
-bandit9: 
+bandit9: just run "strings data.txt | grep ======="
+
+bandit10: use command "base64 -d data.txt" since the data in data.txt is base64 encoded  
+
+bandit11: I figured it was some kind of caesar cipher, which it was. It turns out it's rot13, so i plugged the contents of "data.txt" into cyber chef to decode and got the flag. There are multiple ways to go about this, including scripting.
+
+bandit12: I'll get back to this later and add more detail. The solution invovled creating a temporary directory in /tmp, then move data.txt from your (bandit12) home directory, then using "xxd -r data.txt > data" to undo the hex dump and put the result into "dat". Then you use "file <filename>" to figure out what type of file it is (compressed) then rename the file to have the correct extension -> use the associated tool to decompress -> use file command -> repeat. This goes on until you get to human-readable ASCII data.
